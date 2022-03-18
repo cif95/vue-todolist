@@ -25,13 +25,13 @@
 				<div class="row justify-content-center">
 					<div class="col-12 col-lg-8 col-xl-6 p-5">
 						<section id="my-todos-wrapper">
-							<h2 class="text-center pt-4">Todo list</h2>
+							<h2 class="text-center pt-4">To do list</h2>
 							<ul id="my-todos" class="list-unstyled px-5 py-2">
 								<li @click="toggleDone(todo)" class="todo d-flex" v-for="(todo, index) in todos" :class="(todo.done)? 'todo-done' : '' " >
 									<i v-if="(todo.done)" class="fa-solid fa-circle-check"></i>
 									<i v-else class="fa-solid fa-circle-dot"></i>
 									<span class="text">{{todo.text}}</span>
-									<i id="remove" class="fa-solid fa-circle-xmark" @click="removeTodo(index)"></i>
+									<i class="fa-solid fa-circle-xmark" @click="removeTodo(index)"></i>
 								</li>
 							</ul>
 							<div id="my-input-group" class="text-center pb-5">

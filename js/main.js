@@ -42,6 +42,10 @@ const app = new Vue({
 		]
 	},
 	methods: {
+		/**
+		 * function that adds a new todo obj to todos array
+		 * @param {*} text new todo text
+		 */
 		addTodo(text){
 			if (!text.trim() == ''){
 				const newTodo = {
@@ -54,9 +58,18 @@ const app = new Vue({
 				console.log('empty text, no more new todo!')
 			}
 		},
+		/**
+		 * function that removes a todo obj from todos array
+		 * @param {*} todoIndex index of todo obj to remove
+		 */
 		removeTodo(todoIndex){
-			this.todos.splice(todoIndex, 1);
+			if( todoIndex >=! this.todos.length ) this.todos.splice(todoIndex, 1);
+			else console.log('not valid index');
 		},
+		/**
+		 * function that toggles 'done' property of an object
+		 * @param {*} obj object whose 'done' property will be toggled
+		 */
 		toggleDone(obj){
 			obj.done = !obj.done;
 		}

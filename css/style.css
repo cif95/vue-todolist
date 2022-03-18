@@ -28,16 +28,18 @@ section#my-todos-wrapper ul#my-todos li{
 					-2px -1px 3px white;
 }
 
+/* to do list li  */
+
+section#my-todos-wrapper ul#my-todos li i{
+	margin-top:.3rem;
+	cursor: pointer;
+}
+
 section#my-todos-wrapper ul#my-todos li i.fa-circle-dot{
 	color:white;
 }
 section#my-todos-wrapper ul#my-todos li i.fa-circle-check{
 	color:#2BB35A;
-}
-
-section#my-todos-wrapper ul#my-todos li i{
-	margin-top:.3rem;
-	cursor: pointer;
 }
 
 section#my-todos-wrapper ul#my-todos li i.fa-circle-xmark {
@@ -59,6 +61,8 @@ section#my-todos-wrapper input[type = "text"]{
 	padding-left:.5rem;
 	border: 1px solid white;
 }
+
+/* / to do list li  */
 
 section#my-todos-wrapper button#new-btn{
 	font-size:.7rem;
