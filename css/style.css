@@ -1,13 +1,14 @@
 body{
 	font-family: Raleway;
+	overflow: hidden;
+	background-color: #FF6D12;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%23000' stroke-width='41.6' stroke-opacity='0' %3E%3Ccircle fill='%23FF6D12' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%23f75f21' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%23ef522b' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%23e44533' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%23d93939' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%23cd2e3d' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%23c02441' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%23b21c43' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%23a41445' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%23950e45' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%23850a45' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%23760843' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%23670840' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%2357073c' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%23480737' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%233a0632' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%232c052b' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%23210024' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E");
+	background-attachment: fixed;
+	background-size: cover;
 }
 
 section#my-todos-wrapper{
-	color:rgb(83, 83, 83);
-	min-width:fit-content;
-	border-radius: 20px;
-	box-shadow: 2px 2px 2px rgba(98, 96, 96, 0.51);
-	background-color:#C1DEF0;
+	min-width:280px;
 }
 
 section#my-todos-wrapper h2::after{
@@ -17,18 +18,33 @@ section#my-todos-wrapper h2::after{
 	font-family: "Font Awesome 5 Free";
 }
 
+/* to do list ul  */
+
+section#my-todos-wrapper ul#my-todos{
+	color:#3E0933;
+	border-radius: 20px;
+	box-shadow: 2px 2px 2px rgba(98, 96, 96, 0.51);
+	background-color: #ffffff77;
+}
+
+section#my-todos-wrapper ul#my-todos li:first-of-type{
+	margin-top:1.5rem;
+}
+
 section#my-todos-wrapper ul#my-todos li{
 	border-radius:20px;
 	font-weight:bold;
 	position:relative;
-	min-width:fit-content;
 	padding:.5rem 1rem;
-	margin-bottom:.7rem;
-	box-shadow: 2px 2px 2px rgba(98, 96, 96, 0.51),
-					-2px -1px 3px white;
+	margin-bottom:1.5rem;
+	background-color: rgba(255, 255, 255, 0.74);
+	box-shadow: 2px 2px 2px rgba(98, 96, 96, 0.51);
 }
 
-/* to do list li  */
+section#my-todos-wrapper ul#my-todos li:hover{
+	background-color: #5E0F3D;
+	color:white;
+}
 
 section#my-todos-wrapper ul#my-todos li i{
 	margin-top:.3rem;
@@ -36,14 +52,14 @@ section#my-todos-wrapper ul#my-todos li i{
 }
 
 section#my-todos-wrapper ul#my-todos li i.fa-circle-dot{
-	color:white;
+	color:#977590;
 }
 section#my-todos-wrapper ul#my-todos li i.fa-circle-check{
 	color:#2BB35A;
 }
 
 section#my-todos-wrapper ul#my-todos li i.fa-circle-xmark {
-	color:rgb(236, 97, 97);
+	color:#BE3941;
 	position:absolute;
 	right:1rem;
 }
@@ -59,15 +75,31 @@ section#my-todos-wrapper ul#my-todos li.todo-done span{
 section#my-todos-wrapper input[type = "text"]{
 	border-radius: 10px;
 	padding-left:.5rem;
+	background-color: transparent;
 	border: 1px solid white;
 }
 
-/* / to do list li  */
+ /* / to do list ul  */
 
-section#my-todos-wrapper button#new-btn{
+section#my-todos-wrapper button.my-btn{
 	font-size:.7rem;
+	color:white;
 	width:60px;
 	height:60px;
-	background-color:#C1DEF0;
 	border-radius: 50%;
+}
+
+section#my-todos-wrapper button.my-btn:hover{
+	color:#2E062C;
+	transition: all 1s ease-in-out;
+	animation:.5s pulse infinite alternate;
+}
+
+@keyframes pulse{
+	from {
+		transform: scale(1);
+	}
+	to {
+		transform: scale(1.1);
+	}
 }

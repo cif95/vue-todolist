@@ -25,18 +25,18 @@ const app = new Vue({
 				done : true
 			},
 			{
-				text : 'Learn Portuguese',
+				text : 'Learn german',
 				done : false
 			},			{
-				text : 'Plan a trip',
+				text : 'Plan a meetup',
 				done : false
 			},
 			{
-				text : 'Buy theater tickets',
+				text : 'Buy cinema tickets',
 				done : true
 			},
 			{
-				text : 'Learn Portuguese',
+				text : 'Workout 3 times a week',
 				done : false
 			}
 		]
@@ -65,6 +65,14 @@ const app = new Vue({
 		removeTodo(todoIndex){
 			if( todoIndex >=! this.todos.length ) this.todos.splice(todoIndex, 1);
 			else console.log('not valid index');
+		},
+		// function that clears all todo list
+		clearAll(){
+			this.todos.splice(0);
+		},
+		// function that checks if todo list has at least 1 item and returns true
+		isList(){
+			if (this.todos.length > 0) return true;
 		},
 		/**
 		 * function that toggles 'done' property of an object
