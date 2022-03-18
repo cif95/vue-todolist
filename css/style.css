@@ -7,19 +7,20 @@ section#my-todos-wrapper{
 	min-width:fit-content;
 	border-radius: 20px;
 	box-shadow: 2px 2px 2px rgba(98, 96, 96, 0.51);
-	background-color: #ffcece;
+	background-color:#C1DEF0;
 }
 
 section#my-todos-wrapper h2::after{
 	content:'\f022';
 	margin-left:.5rem;
-	color:#44CACA;
+	color:white;
 	font-family: "Font Awesome 5 Free";
 }
 
 section#my-todos-wrapper ul#my-todos li{
 	border-radius:20px;
 	font-weight:bold;
+	position:relative;
 	min-width:fit-content;
 	padding:.5rem 1rem;
 	margin-bottom:.7rem;
@@ -27,9 +28,26 @@ section#my-todos-wrapper ul#my-todos li{
 					-2px -1px 3px white;
 }
 
-section#my-todos-wrapper ul#my-todos li i {
-	cursor: pointer;
+section#my-todos-wrapper ul#my-todos li i.fa-circle-dot{
+	color:white;
+}
+section#my-todos-wrapper ul#my-todos li i.fa-circle-check{
+	color:#2BB35A;
+}
+
+section#my-todos-wrapper ul#my-todos li i{
 	margin-top:.3rem;
+	cursor: pointer;
+}
+
+section#my-todos-wrapper ul#my-todos li i.fa-circle-xmark {
+	color:rgb(236, 97, 97);
+	position:absolute;
+	right:1rem;
+}
+
+section#my-todos-wrapper ul#my-todos li span.text{
+	margin-left:.5rem;
 }
 
 section#my-todos-wrapper ul#my-todos li.todo-done span{
@@ -43,8 +61,9 @@ section#my-todos-wrapper input[type = "text"]{
 }
 
 section#my-todos-wrapper button#new-btn{
-	width:80px;
-	height:80px;
-	background-color: #ACFFFF;
+	font-size:.7rem;
+	width:60px;
+	height:60px;
+	background-color:#C1DEF0;
 	border-radius: 50%;
 }
