@@ -1,0 +1,49 @@
+body{
+	font-family: Raleway;
+}
+
+section#my-todos-wrapper{
+	color:rgb(83, 83, 83);
+	min-width:fit-content;
+	border-radius: 20px;
+	box-shadow: 2px 2px 2px rgba(98, 96, 96, 0.51);
+	background-color: #f3f4fd;
+}
+
+section#my-todos-wrapper h2::after{
+	content:'\f022';
+	margin-left:.5rem;
+	color:#44CACA;
+	font-family: "Font Awesome 5 Free";
+}
+
+section#my-todos-wrapper ul#my-todos li{
+	border-radius:20px;
+	font-weight:bold;
+	position:relative;
+	min-width:fit-content;
+	padding:.5rem 1rem;
+	margin-bottom:.7rem;
+	box-shadow: 2px 2px 2px rgba(98, 96, 96, 0.51),
+					-2px -1px 3px white;
+}
+
+section#my-todos-wrapper ul#my-todos li.todo-done{
+	text-decoration: line-through;
+}
+
+section#my-todos-wrapper ul#my-todos li:after{
+	right:1rem;
+	cursor: pointer;
+	content:'\f057';
+	position:absolute;
+	font-weight: 400;
+	font-family: "Font Awesome 5 Free";
+}
+
+section#my-todos-wrapper button#new-btn{
+	width:80px;
+	height:80px;
+	background-color: #ACFFFF;
+	border-radius: 50%;
+}
