@@ -28,7 +28,7 @@
 							<h2 class="text-center pt-3">Todo list</h2>
 							<ul id="my-todos" class="list-unstyled p-5">
 								<li @click="toggleDone(todo)" class="todo d-flex justify-content-between" v-for="(todo, index) in todos" :class="(todo.done)? 'todo-done' : '' " >
-									{{todo.text}}
+									<span>{{todo.text}}</span>
 									<i class="fa-solid fa-circle-xmark" @click="removeTodo(index)"></i>
 								</li>
 							</ul>
