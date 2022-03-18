@@ -20,7 +20,6 @@ section#my-todos-wrapper h2::after{
 section#my-todos-wrapper ul#my-todos li{
 	border-radius:20px;
 	font-weight:bold;
-	position:relative;
 	min-width:fit-content;
 	padding:.5rem 1rem;
 	margin-bottom:.7rem;
@@ -28,17 +27,13 @@ section#my-todos-wrapper ul#my-todos li{
 					-2px -1px 3px white;
 }
 
-section#my-todos-wrapper ul#my-todos li.todo-done{
-	text-decoration: line-through;
+section#my-todos-wrapper ul#my-todos li i {
+	cursor: pointer;
+	margin-top:.3rem;
 }
 
-section#my-todos-wrapper ul#my-todos li:after{
-	right:1rem;
-	cursor: pointer;
-	content:'\f057';
-	position:absolute;
-	font-weight: 400;
-	font-family: "Font Awesome 5 Free";
+section#my-todos-wrapper ul#my-todos li.todo-done{
+	text-decoration: line-through;
 }
 
 section#my-todos-wrapper button#new-btn{
