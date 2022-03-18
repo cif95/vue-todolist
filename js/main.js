@@ -16,6 +16,7 @@
 const app = new Vue({
 	el:'#app',
 	data: {
+		string: '',
 		todos: [
 			{
 				text : 'Plan a trip',
@@ -43,6 +44,20 @@ const app = new Vue({
 		]
 	},
 	methods: {
+
+		addTodo(text){
+			if (!text.trim() == ''){
+				const newTodo = {
+					text : text,
+					done : false
+				};
+				this.todos.push(newTodo);
+				this.string = '';
+			} else {
+				console.log('empty text, no more new todo!')
+			}
+		},
+
 		removeTodo(todoIndex){
 			this.todos.splice(todoIndex, 1);
 		}

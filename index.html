@@ -33,8 +33,8 @@
 								</li>
 							</ul>
 							<div id="my-input-group" class="text-center pb-5">
-								<input type="text" placeholder="new todo.." class="d-block mx-auto mb-4">
-								<button id="new-btn" class="btn btn-outline-secondary text-uppercase fw-bold">New</button>
+								<input v-model="string" type="text" placeholder="new todo.." class="d-block mx-auto mb-4">
+								<button @click="addTodo(string)" id="new-btn" class="btn btn-outline-secondary text-uppercase fw-bold">New</button>
 							</div>
 						</section>
 					</div>
