@@ -57,9 +57,11 @@ const app = new Vue({
 				console.log('empty text, no more new todo!')
 			}
 		},
-
 		removeTodo(todoIndex){
 			this.todos.splice(todoIndex, 1);
+		},
+		toggleDone(obj){
+			obj.done = !obj.done;
 		}
 	}
 });

@@ -27,13 +27,13 @@
 						<section id="my-todos-wrapper">
 							<h2 class="text-center pt-3">Todo list</h2>
 							<ul id="my-todos" class="list-unstyled p-5">
-								<li class="todo d-flex justify-content-between" v-for="(todo, index) in todos" :class="(todo.done)? 'todo-done' : '' " >
+								<li @click="toggleDone(todo)" class="todo d-flex justify-content-between" v-for="(todo, index) in todos" :class="(todo.done)? 'todo-done' : '' " >
 									{{todo.text}}
 									<i class="fa-solid fa-circle-xmark" @click="removeTodo(index)"></i>
 								</li>
 							</ul>
 							<div id="my-input-group" class="text-center pb-5">
-								<input v-model="string" type="text" placeholder="new todo.." class="d-block mx-auto mb-4">
+								<input @keydown.enter="addTodo(string)" v-model="string" type="text" placeholder="new todo.." class="d-block mx-auto mb-4">
 								<button @click="addTodo(string)" id="new-btn" class="btn btn-outline-secondary text-uppercase fw-bold">New</button>
 							</div>
 						</section>
