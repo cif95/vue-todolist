@@ -36,10 +36,10 @@
 						</div>
 						<div class="col-12 col-lg-5 order-lg-0">
 							<ul id="my-todos" v-show="isList()" class="list-unstyled px-3 px-md-5 py-3">
-								<li @click="toggleDone(todo)" class="todo d-flex" v-for="(todo, index) in todos" :class="(todo.done)? 'todo-done' : '' " >
+								<li  class="todo d-flex" v-for="(todo, index) in todos" >
 									<i v-if="(todo.done)" class="fa-solid fa-circle-check"></i>
 									<i v-else class="fa-solid fa-circle-dot"></i>
-									<span class="text">{{todo.text}}</span>
+									<span @click="toggleDone(todo)" :class="{ 'todo-done' : todo.done }"  class="text">{{todo.text}}</span>
 									<i class="fa-solid fa-circle-xmark" @click="removeTodo(index)"></i>
 								</li>
 							</ul>

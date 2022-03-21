@@ -68,7 +68,7 @@ section#my-todos-wrapper ul#my-todos li span.text{
 	margin-left:.5rem;
 }
 
-section#my-todos-wrapper ul#my-todos li.todo-done span{
+section#my-todos-wrapper ul#my-todos span.todo-done{
 	text-decoration: line-through;
 }
 
